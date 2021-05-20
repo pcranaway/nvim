@@ -19,8 +19,5 @@ Plug 'lervag/vimtex'
 
 " searching through the project
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
-" smooth scrolling
-Plug 'psliwka/vim-smoothie'
 call plug#end()
 
