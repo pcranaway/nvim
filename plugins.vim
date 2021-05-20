@@ -19,5 +19,8 @@ Plug 'lervag/vimtex'
 
 " searching through the project
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+" zen mode lmaooo https://www.youtube.com/watch?v=z0-bHDEmZko
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
