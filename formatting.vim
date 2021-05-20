@@ -5,3 +5,6 @@ autocmd FileType make setlocal noexpandtab
 set sw=4 ts=4 sts=4
 set expandtab
 set tabstop=4
+
+" spell checking :heart:
+autocmd BufRead *.gr.*tex setlocal spell spelllang=el
