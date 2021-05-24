@@ -3,8 +3,9 @@ set sw=4 ts=4 sts=4
 set expandtab
 set tabstop=4
 
-" use tabs on makefiles because they require that
+" fuck the police coming straight from the underground kinda shit
 autocmd FileType make setlocal noexpandtab
+autocmd FileType asm setlocal noexpandtab sw=8 ts=8 sts=8
 
 " spell checking :heart:
 autocmd BufRead *.gr.*tex setlocal spell spelllang=el
