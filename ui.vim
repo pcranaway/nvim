@@ -10,6 +10,5 @@ set guicursor=
 set rnu
 
 " color scheme and syntax
-colorscheme apprentice
+colorscheme gruvbox
 syntax on
-

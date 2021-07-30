@@ -19,33 +19,32 @@ lua << EOF
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.gopls.setup{}
-require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.texlab.setup{}
+require'lspconfig'.solargraph.setup{}
+require'lspconfig'.gopls.setup{}
+require'lspconfig'.svelte.setup{}
+require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 EOF
 
-" java lsp (very specific)
-" lua << EOF
-" local lspconfig = require'lspconfig'
-" local configs = require'lspconfig/configs'
-" local util = require 'lspconfig/util'
-" 
-" if not lspconfig.java_language_server then
-"     configs.java_language_server = {
-"         default_config = {
-"             cmd = {'/home/mother/oss/java-language-server/dist/lang_server_linux.sh'};
-"             filetypes = {'java'};
-"             root_dir = function(fname)
-"                 for _, patterns in ipairs({{'build.xml', 'pom.xml', 'settings.gradle', 'settings.gradle.kts'}, {'build.gradle', 'build.gradle.kts'}}) do
-"                     local root = util.root_pattern(unpack(patterns))(fname)
-"                     if root then return root end
-"                 end
-"                 return vim.fn.getcwd()
-"             end;
-"             settings = {};
-"         };
-"     }
-" end
-" 
-" lspconfig.java_language_server.setup{}
-" EOF
+lua << EOF
+local lspconfig = require'lspconfig'
+local configs = require'lspconfig/configs'
+local util = require 'lspconfig/util'
 
+    configs.java_language_server = {
+        default_config = {
+            cmd = {'/home/mother/oss/java-language-server/dist/lang_server_linux.sh'};
+            filetypes = {'java'};
+            root_dir = function(fname)
+                for _, patterns in ipairs({{'build.xml', 'pom.xml', 'settings.gradle', 'settings.gradle.kts'}, {'build.gradle', 'build.gradle.kts'}}) do
+                    local root = util.root_pattern(unpack(patterns))(fname)
+                    if root then return root end
+                end
+                return vim.fn.getcwd()
+            end;
+            settings = {};
+        };
+    }
+
+lspconfig.java_language_server.setup{}
+EOF

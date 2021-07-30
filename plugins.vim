@@ -1,9 +1,9 @@
 call plug#begin('~/.vim/plugged')
 " very cool tree
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " very cool color scheme
-Plug 'romainl/Apprentice'
+Plug 'morhetz/gruvbox'
 
 " :fire: lsp configs
 Plug 'neovim/nvim-lspconfig'
@@ -22,5 +22,14 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " zen mode lmaooo https://www.youtube.com/watch?v=z0-bHDEmZko
 Plug 'junegunn/goyo.vim'
+
+" tabular!? ?!!
+Plug 'godlygeek/tabular'
+
+Plug 'beeender/Comrade'
+
+" gleam
+Plug 'gleam-lang/gleam.vim'
+
 call plug#end()
 

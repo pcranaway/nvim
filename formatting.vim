@@ -9,3 +9,5 @@ autocmd FileType asm setlocal noexpandtab sw=8 ts=8 sts=8
 
 " spell checking :heart:
 autocmd BufRead *.gr.*tex setlocal spell spelllang=el
+
+set autoread
