@@ -23,5 +23,13 @@ nnoremap <C-r><C-j> :resize -4<CR>
 " feature) 
 nnoremap Q gq
 
+" copy the rest of the line after current character
+nnoremap Y y$
+
+" put find results on the same line as the cursor (same with J)
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
 " THIS IS BROKEN AS FUCK!
 " nnoremap <C-M> :LeaderfFile<CR>
