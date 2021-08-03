@@ -22,7 +22,7 @@ require'lspconfig'.gopls.setup{}
 require'lspconfig'.texlab.setup{}
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.gopls.setup{}
-require'lspconfig'.svelte.setup{}
+require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 EOF
 
