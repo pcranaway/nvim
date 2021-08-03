@@ -17,8 +17,8 @@ Plug 'rhysd/vim-clang-format'
 " TeX support
 Plug 'lervag/vimtex'
 
-" searching through the project
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+" ctrl pee
+Plug 'kien/ctrlp.vim'
 
 " zen mode lmaooo https://www.youtube.com/watch?v=z0-bHDEmZko
 Plug 'junegunn/goyo.vim'
